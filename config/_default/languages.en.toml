@@ -1,0 +1,16 @@
+locale = "en"
+label = "English"
+weight = 1
+title = "Lean Agents"
+
+[params]
+displayName = "EN"
+isoCode = "en"
+rtl = false
+dateFormat = "2 January 2006"
+description = "Resource-efficient AI agent runtimes. From 9 MiB on Kubernetes to 180 KiB on an ESP32."
+
+[params.author]
+name = "Lean Agents Community"
+headline = "Efficient AI agents for every scale"
+bio = "A movement advocating for resource-efficient AI agent runtimes built with compiled languages."

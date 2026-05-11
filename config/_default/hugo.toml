@@ -1,0 +1,23 @@
+baseURL = "https://leanagents.dev/"
+defaultContentLanguage = "en"
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+enableEmoji = true
+summaryLength = 0
+
+[pagination]
+pagerSize = 10
+
+[taxonomies]
+tag = "tags"
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
+[sitemap]
+changeFreq = "daily"
+priority = 0.5
+
+[imaging]
+anchor = "Center"

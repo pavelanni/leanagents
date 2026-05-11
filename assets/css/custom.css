@@ -1,0 +1,9 @@
+.text-center > .prose p,
+.text-center > .prose ul,
+.text-center > .prose ol,
+.text-center > .prose table,
+.text-center > .prose blockquote,
+.text-center > .prose .alert,
+.text-center > .prose .github-card-container {
+  text-align: left;
+}

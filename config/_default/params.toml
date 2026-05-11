@@ -1,0 +1,30 @@
+colorScheme = "ocean"
+defaultAppearance = "dark"
+autoSwitchAppearance = true
+enableSearch = true
+enableCodeCopy = true
+
+[header]
+layout = "basic"
+
+[footer]
+showMenu = true
+showCopyright = true
+showAppearanceSwitcher = true
+
+[homepage]
+layout = "background"
+showRecent = false
+
+[article]
+showDate = true
+showReadingTime = true
+showWordCount = false
+showTableOfContents = true
+showBreadcrumbs = true
+
+[list]
+showBreadcrumbs = true
+showSummary = true
+groupByYear = false
+cardView = true
