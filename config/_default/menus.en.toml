@@ -4,6 +4,11 @@ pageRef = "manifesto"
 weight = 10
 
 [[main]]
+name = "Journey"
+pageRef = "journey"
+weight = 15
+
+[[main]]
 name = "Projects"
 pageRef = "projects"
 weight = 20

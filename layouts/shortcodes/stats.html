@@ -1,0 +1,11 @@
+<div class="stats-strip" role="region" aria-label="Key metrics">
+  {{ $items := .Get "items" | transform.Unmarshal }}
+  {{ range $items }}
+  <div class="stats-card">
+    <div class="stats-value">{{ .value }}</div>
+    <div class="stats-label">{{ .label }}</div>
+    <div class="stats-comparison">{{ .comparison }}</div>
+    <div class="stats-multiplier">{{ .multiplier }}</div>
+  </div>
+  {{ end }}
+</div>

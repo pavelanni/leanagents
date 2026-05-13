@@ -1,5 +1,5 @@
 ---
-title: "Member projects"
+title: "Project registry"
 description: "A curated registry of lean agent runtimes."
 showDate: false
 showAuthor: false
