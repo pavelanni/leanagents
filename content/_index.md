@@ -4,7 +4,7 @@ description: "Resource-efficient AI agent runtimes. From 9 MiB on Kubernetes to 
 showTitle: true
 ---
 
-{{< figure src="lean_agents_hero.png" alt="Three lean agents collaborating — analyzing data, writing code, and designing architecture" class="mx-auto max-w-sm" nozoom=true >}}
+{{< figure src="lean_agents_hero.png" alt="Three lean agents collaborating — analyzing data, writing code, and designing architecture" figureClass="hero-figure" nozoom=true >}}
 
 {{< stats items=`[
   {"value": "10 MiB", "label": "Lean Agent Pod", "comparison": "vs 300 MiB traditional", "multiplier": "30×"},
