@@ -1,3 +1,9 @@
+/* Custom font */
+:root {
+  --default-font-family: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: 0.02em;
+}
+
 /* Preserve existing text alignment overrides */
 .text-center > .prose p,
 .text-center > .prose ul,
