@@ -2,6 +2,7 @@ colorScheme = "ocean"
 defaultAppearance = "dark"
 autoSwitchAppearance = true
 enableSearch = true
+defaultSocialImage = "img/social.png"
 enableCodeCopy = true
 
 [header]
