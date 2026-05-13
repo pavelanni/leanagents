@@ -1,4 +1,4 @@
-<div class="stats-strip">
+<div class="stats-strip" role="region" aria-label="Key metrics">
   {{ $items := .Get "items" | transform.Unmarshal }}
   {{ range $items }}
   <div class="stats-card">

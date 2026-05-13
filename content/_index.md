@@ -1,7 +1,6 @@
 ---
 title: "Lean Agents"
 description: "Resource-efficient AI agent runtimes. From 9 MiB on Kubernetes to 180 KiB on an ESP32."
-showTitle: true
 ---
 
 {{< figure src="lean_agents_hero.png" alt="Three lean agents collaborating — analyzing data, writing code, and designing architecture" figureClass="hero-figure" nozoom=true >}}

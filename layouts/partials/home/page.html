@@ -7,6 +7,8 @@
   {{ end }}
   <section class="w-full">{{ .Content }}</section>
 </article>
+{{ if .Site.Params.homepage.showRecent }}
 <section>
   {{ partial "recent-articles/main.html" . }}
 </section>
+{{ end }}
