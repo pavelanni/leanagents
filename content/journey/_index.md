@@ -11,19 +11,18 @@ showTableOfContents: true
 {{< figure src="journey-hero.png" alt="The evolution of AI agents: from individual magic to framework complexity to lean runtimes" class="mx-auto max-w-3xl" nozoom=true >}}
 
 {{< lead >}}
-The conversation about AI agents has shifted three times in three
-years --- from "what can they do?" to "how do we orchestrate them?"
-to "how do we run them in production?"
+AI agents have gone through three distinct phases in three years.
+Each phase solved one problem and revealed the next.
 {{< /lead >}}
 
 ## Phase 1: Magic (2023--2024)
 
 Early adopters discovered that LLMs with tool access could do
 remarkable things. Cursor, GitHub Copilot, ChatGPT plugins ---
-individual developers experienced what felt like a productivity
-superpower. One agent, one engineer, full machine access.
+individual developers saw dramatic productivity gains. One agent,
+one engineer, full machine access.
 
-The conversation was about **capability**: what CAN agents do?
+The focus was on **capability** --- exploring what agents could do.
 
 ## Phase 2: Frameworks (2024--2025)
 
@@ -33,18 +32,20 @@ pipelines, and complex workflows.
 
 But each agent is a full Python or Node.js runtime --- pip install,
 shell access, network reach. The agent can install packages, download
-code, curl arbitrary endpoints. Fine for five agents in a lab.
-Terrifying for 500 in production.
+code, curl arbitrary endpoints. This works for five agents in a
+development environment, but becomes a serious liability at 500 in
+production.
 
 ## Phase 3: Runtime (2025--2026)
 
-The question shifts from "what can an agent do?" to "what SHOULD an
-agent do?" This is the crossing-the-chasm moment.
+The focus shifts from what agents can do to what they should be
+allowed to do. As organizations move from experimentation to
+production, the requirements change fundamentally.
 
 Business users don't need agents that write code, install packages,
 or browse the web. They need agents that summarize reports, review
 documents, and answer domain questions --- with guardrails that an
-admin controls.
+administrator controls.
 
 ## The problem with today's agents
 
@@ -83,19 +84,18 @@ impractical.
 
 ## The key insight
 
-> We're moving from agents-for-engineers to agents-for-everyone. That
-> requires treating the agent runtime like infrastructure, not an
-> application. Small, constrained, auditable, deployable at scale.
+Agents built for developers --- Claude Code, Cursor, Goose --- are
+powerful precisely because they have full access to the machine. But
+that access model does not transfer to the rest of the organization.
+A document summarization agent for the legal team should not be able
+to install Python packages. An HR policy reviewer should not have
+shell access.
 
-The agents we use today --- Claude Code, Cursor, Goose --- are
-powerful precisely because they have full access to the developer's
-machine. That power is the wrong model for business users. A document
-summarization agent for the legal team should not be able to install
-Python packages. An HR policy reviewer should not have shell access.
-
-Lean agents invert the control model: instead of a powerful agent
-that you try to constrain with prompts, you start with a minimal
-agent and add only the capabilities it needs --- as auditable, signed
+Bringing agents to every team requires treating the agent runtime
+like infrastructure: small, constrained, auditable, and deployable
+at scale. Lean agents invert the control model --- instead of a
+powerful agent constrained by prompts, you start with a minimal
+agent and add only the capabilities it needs, as auditable, signed
 skill images.
 
 ---
