@@ -100,6 +100,8 @@ skill images.
 
 ---
 
+<div class="cta-row">
+
 {{< button href="/manifesto/" >}}
 Read the manifesto
 {{< /button >}}
@@ -107,3 +109,5 @@ Read the manifesto
 {{< button href="/projects/" >}}
 View projects
 {{< /button >}}
+
+</div>
