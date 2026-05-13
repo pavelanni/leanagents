@@ -1,3 +1,4 @@
+/* Preserve existing text alignment overrides */
 .text-center > .prose p,
 .text-center > .prose ul,
 .text-center > .prose ol,
@@ -6,4 +7,126 @@
 .text-center > .prose .alert,
 .text-center > .prose .github-card-container {
   text-align: left;
+}
+
+/* Stats strip */
+.stats-strip {
+  display: flex;
+  gap: 0;
+  margin: 1.5rem 0;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.stats-card {
+  flex: 1;
+  background: rgb(var(--color-neutral-800));
+  padding: 1.5rem 0.75rem;
+  text-align: center;
+  border-right: 1px solid rgb(var(--color-neutral-700));
+}
+
+.stats-card:last-child {
+  border-right: none;
+}
+
+.stats-value {
+  font-size: 2.2em;
+  font-weight: 800;
+  color: rgb(var(--color-primary-400));
+  line-height: 1;
+}
+
+.stats-label {
+  color: rgb(var(--color-neutral-300));
+  font-size: 0.8em;
+  margin-top: 0.375rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.stats-comparison {
+  color: rgb(var(--color-neutral-200));
+  font-size: 0.85em;
+  margin-top: 0.25rem;
+}
+
+.stats-multiplier {
+  margin-top: 0.5rem;
+  font-size: 0.85em;
+  font-weight: 700;
+  color: rgb(var(--color-secondary-400));
+}
+
+/* Responsive: stack to 2x2 on mobile */
+@media (max-width: 640px) {
+  .stats-strip {
+    flex-wrap: wrap;
+  }
+  .stats-card {
+    flex: 1 1 50%;
+    border-bottom: 1px solid rgb(var(--color-neutral-700));
+  }
+  .stats-card:nth-child(2) {
+    border-right: none;
+  }
+  .stats-card:nth-child(3),
+  .stats-card:nth-child(4) {
+    border-bottom: none;
+  }
+}
+
+/* Two-track cards */
+.two-tracks {
+  display: flex;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+.track-card {
+  flex: 1;
+  background: rgb(var(--color-neutral-800));
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.track-icon {
+  font-size: 1.4em;
+  margin-bottom: 0.25rem;
+}
+
+.track-icon img {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  object-fit: cover;
+  display: inline-block;
+}
+
+.track-title {
+  color: rgb(var(--color-neutral-100));
+  font-weight: 600;
+  font-size: 0.9em;
+}
+
+.track-desc {
+  color: rgb(var(--color-neutral-300));
+  font-size: 0.8em;
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 640px) {
+  .two-tracks {
+    flex-direction: column;
+  }
+}
+
+/* CTA button row */
+.cta-row {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1.5rem 0;
 }
