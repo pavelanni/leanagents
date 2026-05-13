@@ -13,7 +13,7 @@ showCopyright = true
 showAppearanceSwitcher = true
 
 [homepage]
-layout = "background"
+layout = "page"
 showRecent = false
 
 [article]
