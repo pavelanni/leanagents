@@ -1,5 +1,6 @@
 <div class="stats-strip">
-  {{ range .Params.items }}
+  {{ $items := .Get "items" | transform.Unmarshal }}
+  {{ range $items }}
   <div class="stats-card">
     <div class="stats-value">{{ .value }}</div>
     <div class="stats-label">{{ .label }}</div>
