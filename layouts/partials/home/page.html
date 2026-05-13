@@ -1,11 +1,9 @@
+<style>.main-menu > a:first-child { display: none; }</style>
 <article class="max-w-full prose dark:prose-invert">
-  {{ $showTitle := .Param "showTitle" | default true }}
-  {{ if $showTitle }}
-    {{ with .Title }}
-      <header>
-        <h1>{{ . | emojify }}</h1>
-      </header>
-    {{ end }}
+  {{ with .Title }}
+    <header>
+      <h1>{{ . | emojify }}</h1>
+    </header>
   {{ end }}
   <section class="w-full">{{ .Content }}</section>
 </article>
