@@ -27,6 +27,14 @@ showReadingTime: false
 - Millisecond response times for cached behaviors
 - Chat-as-coding paradigm for IoT devices
 
+<div class="cta-row">
+
 {{< button href="https://esp-claw.com/en" target="_blank" >}}
 Visit website
 {{< /button >}}
+
+{{< button href="https://github.com/espressif/esp-claw" target="_blank" >}}
+Visit repository
+{{< /button >}}
+
+</div>

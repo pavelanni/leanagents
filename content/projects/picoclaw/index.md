@@ -24,6 +24,14 @@ showReadingTime: false
 - Runs on hardware costing as little as $10
 - Less than 10 MB memory footprint
 
+<div class="cta-row">
+
 {{< button href="https://picoclaw.io" target="_blank" >}}
 Visit website
 {{< /button >}}
+
+{{< button href="https://github.com/sipeed/picoclaw" target="_blank" >}}
+Visit repository
+{{< /button >}}
+
+</div>

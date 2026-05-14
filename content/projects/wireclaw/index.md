@@ -24,7 +24,14 @@ showReadingTime: false
 - Accessible via Telegram, serial, or NATS
 - Remembers across reboots
 
+<div class="cta-row">
+
 {{< button href="https://wireclaw.io/" target="_blank" >}}
 Visit website
 {{< /button >}}
 
+{{< button href="https://github.com/M64GitHub/WireClaw" target="_blank" >}}
+Visit repository
+{{< /button >}}
+
+</div>

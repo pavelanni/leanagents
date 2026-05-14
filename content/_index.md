@@ -6,8 +6,8 @@ description: "Resource-efficient AI agent runtimes. From 9 MiB on Kubernetes to 
 {{< figure src="lean_agents_hero.png" alt="Three lean agents collaborating — analyzing data, writing code, and designing architecture" figureClass="hero-figure" nozoom=true >}}
 
 {{< stats items=`[
-  {"value": "10 MiB", "label": "Lean Agent Pod", "comparison": "vs 300 MiB traditional", "multiplier": "30×"},
-  {"value": "5,000", "label": "Agents per 50 GiB", "comparison": "vs 100 traditional", "multiplier": "50×"},
+  {"value": "10 MiB", "label": "Lean Agent Pod", "comparison": "vs 300 MiB developer agent", "multiplier": "30×"},
+  {"value": "5,000", "label": "Agents per 50 GiB", "comparison": "vs 100 developer agents", "multiplier": "50×"},
   {"value": "0", "label": "Runtime Deps", "comparison": "vs Python + pip + OS pkgs", "multiplier": "Static binary"},
   {"value": "10 ms", "label": "Startup Time", "comparison": "vs seconds", "multiplier": "Instant"}
 ]` >}}

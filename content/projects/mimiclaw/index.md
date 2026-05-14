@@ -25,6 +25,14 @@ showReadingTime: false
 - Remembers across reboots
 - Claude-powered intelligence
 
+<div class="cta-row">
+
 {{< button href="https://mimiclaw.io/" target="_blank" >}}
 Visit website
 {{< /button >}}
+
+{{< button href="https://github.com/memovai/mimiclaw" target="_blank" >}}
+Visit repository
+{{< /button >}}
+
+</div>

@@ -1,6 +1,6 @@
 ---
 title: "The journey"
-description: "How AI agents evolved from magic tricks to production infrastructure."
+description: "How AI agents evolved from personal tools to production infrastructure."
 showDate: false
 showReadingTime: true
 showAuthor: false
@@ -8,95 +8,102 @@ showBreadcrumbs: true
 showTableOfContents: true
 ---
 
-{{< figure src="journey-hero.png" alt="The evolution of AI agents: from individual magic to framework complexity to lean runtimes" class="mx-auto max-w-3xl" nozoom=true >}}
+{{< figure src="journey-hero.png" alt="The evolution of AI agents: from individual exploration to framework orchestration to production runtimes" class="mx-auto max-w-3xl" nozoom=true >}}
 
 {{< lead >}}
 AI agents have gone through three distinct phases in three years.
 Each phase solved one problem and revealed the next.
 {{< /lead >}}
 
-## Phase 1: Magic (2023--2024)
+## Phase 1: Discovery (2023--2024)
 
-Early adopters discovered that LLMs with tool access could do
-remarkable things. Cursor, GitHub Copilot, ChatGPT plugins ---
-individual developers saw dramatic productivity gains. One agent,
-one engineer, full machine access.
+Developers discovered that LLMs with tool access could do remarkable
+things. Cursor, GitHub Copilot, ChatGPT plugins --- individual
+engineers saw dramatic productivity gains. One agent, one developer,
+full machine access.
+
+These **developer agents** are powerful precisely because they have
+unrestricted access to the developer's environment. They can read
+any file, run any command, install any package. That trust model
+works because the developer is both the operator and the user ---
+the agent acts on their behalf, on their machine.
 
 The focus was on **capability** --- exploring what agents could do.
 
-## Phase 2: Frameworks (2024--2025)
+## Phase 2: Orchestration (2024--2025)
 
 Teams started building with LangChain, CrewAI, AutoGen, and similar
-frameworks. The focus shifted to multi-agent orchestration, RAG
+frameworks. The focus shifted to **multi-agent orchestration**, RAG
 pipelines, and complex workflows.
 
-But each agent is a full Python or Node.js runtime --- pip install,
-shell access, network reach. The agent can install packages, download
-code, curl arbitrary endpoints. This works for five agents in a
-development environment, but becomes a serious liability at 500 in
-production.
+These frameworks extended the developer agent model to team
+settings. Each agent is still a full Python or Node.js runtime ---
+`pip install`, shell access, network reach. This works well for
+**research, prototyping, and small-scale deployments** where a
+technical team manages the agents directly.
 
-## Phase 3: Runtime (2025--2026)
+## Phase 3: Production (2025--2026)
 
-The focus shifts from what agents can do to what they should be
-allowed to do. As organizations move from experimentation to
-production, the requirements change fundamentally.
+As organizations move from experimentation to production, the
+requirements change. The question is no longer what agents can do,
+but **how to deploy them safely at scale**.
 
-Business users don't need agents that write code, install packages,
-or browse the web. They need agents that summarize reports, review
-documents, and answer domain questions --- with guardrails that an
-administrator controls.
+Think of it like the difference between your personal computer and
+a server processing banking transactions. Your laptop runs whatever
+you want --- you trust yourself. A production server is **locked
+down, purpose-built, and auditable**. Both are computers. Both are
+necessary. They serve different purposes.
 
-## The problem with today's agents
+The same distinction applies to agents.
 
-Today's agentic frameworks are built for and by software engineers.
-They assume the user is technical, full filesystem and network access
-is acceptable, the agent should be maximally capable, and one or a
-few agents serve the whole team.
+## Two kinds of agents
 
-This doesn't scale. When you want to deploy 100 or 1,000 agents
-across an organization --- each serving different teams, different
-roles, different compliance requirements --- you need a fundamentally
-different approach.
+Developer agents and production agents are not competitors --- they
+are complements. Developer agents are where ideas begin: exploring
+capabilities, prototyping workflows, pushing boundaries. Production
+agents are where those ideas get deployed: constrained, auditable,
+running at scale.
 
-**The attack surface problem.** A typical Python-based agent runtime
-ships with curl, pip, a shell, and a full standard library. An
-adversarial prompt can instruct the agent to install a package,
-download a script, or exfiltrate data via HTTP. Guardrails are
-prompt-level (easy to bypass), not infrastructure-level (hard to
-bypass).
-
-**The resource problem.** A Python or TypeScript-based agent pod on
-Kubernetes consumes 200--500 MiB of memory. At that footprint,
-running 100 agents costs 50 GiB of cluster memory. Running 1,000 is
-impractical.
-
-## By the numbers
-
-| Metric | Traditional frameworks | Lean agents |
+| | Developer agents | Production agents |
 | --- | --- | --- |
-| Pod memory | ~200--300 MiB | ~10 MiB |
-| Agents per 50 GiB | ~100 | ~5,000 |
-| Runtime deps | Python, pip, OS packages | None (static binary) |
-| Startup time | Seconds | Milliseconds |
-| Attack surface | Shell, network, filesystem | Configured tools only |
-| Skill delivery | pip install, git clone | Signed OCI images |
+| **Purpose** | Exploration, research, development | Enterprise deployment at scale |
+| **Trust model** | Developer trusts themselves | Admin controls capabilities |
+| **Access** | Full machine access | Configured tools only |
+| **Runtime** | Python, Node.js, full standard library | Compiled, minimal, static binary |
+| **Footprint** | ~200--300 MiB | ~10 MiB |
+| **Density** | ~100 per 50 GiB | ~5,000 per 50 GiB |
+| **Skill delivery** | `pip install`, `git clone` | Signed OCI images |
+| **Examples** | Claude Code, Cursor, Goose | DocsClaw, ZeroClaw, OpenFang |
 
-## The key insight
+Developer agents don't disappear when production agents arrive.
+They remain essential tools for the engineers who design, build,
+and test the workflows that production agents execute. A developer
+uses Claude Code to prototype an agent workflow, then deploys a
+lean agent to run that workflow in production --- just as a
+developer writes code on a laptop, then deploys it to a server.
 
-Agents built for developers --- Claude Code, Cursor, Goose --- are
-powerful precisely because they have full access to the machine. But
-that access model does not transfer to the rest of the organization.
+## Why production agents must be different
+
 A document summarization agent for the legal team should not be able
 to install Python packages. An HR policy reviewer should not have
-shell access.
+shell access. When you deploy 100 or 1,000 agents across an
+organization --- each serving different teams, different roles,
+different compliance requirements --- you need a runtime built for
+that context.
 
-Bringing agents to every team requires treating the agent runtime
-like infrastructure: small, constrained, auditable, and deployable
-at scale. Lean agents invert the control model --- instead of a
-powerful agent constrained by prompts, you start with a minimal
-agent and add only the capabilities it needs, as auditable, signed
-skill images.
+**Minimal footprint.** At 10 MiB per agent, you can run 5,000
+specialized agents on the same cluster resources that hold 100
+developer agents. That changes the economics from "one big agent
+for everyone" to "the right agent for each team."
+
+**Constrained by design.** A compiled agent runtime has no shell,
+no package manager, no ability to expand its own capabilities. The
+attack surface is what the administrator configures --- not what an
+adversarial prompt can discover.
+
+**Infrastructure-grade delivery.** Skills are packaged, versioned,
+and signed --- distributed through the same supply chain enterprises
+already trust for container images.
 
 ---
 
