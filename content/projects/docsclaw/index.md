@@ -26,6 +26,14 @@ showReadingTime: false
 - Session persistence
 - ConfigMap-driven configuration
 
+<div class="cta-row">
+
 {{< button href="https://docsclaw.dev" target="_blank" >}}
 Visit website
 {{< /button >}}
+
+{{< button href="https://github.com/redhat-et/docsclaw" target="_blank" >}}
+Visit repository
+{{< /button >}}
+
+</div>

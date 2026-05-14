@@ -23,6 +23,14 @@ showReadingTime: false
   voice, and more)
 - Built in Rust for minimal resource footprint
 
+<div class="cta-row">
+
 {{< button href="https://www.zeroclawlabs.ai/" target="_blank" >}}
 Visit website
 {{< /button >}}
+
+{{< button href="https://github.com/zeroclaw-labs/zeroclaw" target="_blank" >}}
+Visit repository
+{{< /button >}}
+
+</div>

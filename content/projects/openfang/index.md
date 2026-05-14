@@ -23,6 +23,14 @@ showReadingTime: false
 - Designed for autonomous agent workloads
 - Not a chatbot wrapper or multi-agent orchestrator
 
+<div class="cta-row">
+
 {{< button href="https://openfang.sh" target="_blank" >}}
 Visit website
 {{< /button >}}
+
+{{< button href="https://github.com/RightNow-AI/openfang" target="_blank" >}}
+Visit repository
+{{< /button >}}
+
+</div>
