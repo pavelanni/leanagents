@@ -138,3 +138,8 @@ The Lean Agents movement is open to any project that builds agent
 runtimes following these principles. If your runtime is compiled,
 minimal, and observable, it belongs in the
 [project registry](/projects/).
+
+{{< alert >}}
+**Want to add your project?** [Open an issue](https://github.com/pavelanni/leanagents/issues/new)
+on our GitHub repository.
+{{< /alert >}}
