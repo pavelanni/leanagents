@@ -12,3 +12,9 @@ weight = 15
 name = "Projects"
 pageRef = "projects"
 weight = 20
+
+[[main]]
+pre = "github"
+name = ""
+url = "https://github.com/pavelanni/leanagents"
+weight = 30
