@@ -125,29 +125,26 @@ constrained, auditable, deployable at scale on OpenShift.
 | Attack surface    | Shell, network, filesystem | Configured tools only |
 | Skill delivery    | pip install, git clone     | Signed OCI images     |
 
-## Talking points for the interview
+## Key takeaways
 
-**The chasm.** Agents today are built for engineers. Bringing
-agents to every team in the enterprise requires a runtime as
-manageable and auditable as a container. DocsClaw is that
-container.
+Agents today are built for engineers. Bringing agents to every
+team in the enterprise requires a runtime as manageable and
+auditable as a container.
 
-**Scale.** At 10 MiB per agent, you run 5,000 specialized
-agents on the same cluster that holds 100 Python-based agents.
-The economics shift from "one big agent for everyone" to "the
-right agent for each team."
+At 10 MiB per agent, you can run 5,000 specialized agents on
+the same cluster that holds 100 Python-based agents. The
+economics shift from "one big agent for everyone" to "the right
+agent for each team."
 
-**Security.** The agent runtime has no curl, no Python, no
-package manager, no shell. The attack surface is what the admin
-configures in a ConfigMap.
+The agent runtime has no curl, no Python, no package manager,
+no shell. The attack surface is what the admin configures in a
+ConfigMap.
 
-**Ecosystem.** We built two things: a lightweight runtime
-(DocsClaw) and a skill distribution system (skillimage.dev).
-Skills are packaged, signed, and distributed like container
-images. Enterprises already know how to manage that supply
-chain.
+DocsClaw pairs a lightweight runtime with a skill distribution
+system (skillimage.dev). Skills are packaged, signed, and
+distributed like container images, using a supply chain model
+that enterprises already operate.
 
-**Open source.** The runtime, the skill packaging tools, the
-OCI format are all open source. We're proving a pattern that
-runs on any Kubernetes cluster, with OpenShift providing the
-enterprise-grade foundation.
+The runtime, the skill packaging tools, and the OCI format are
+all open source. The pattern runs on any Kubernetes cluster,
+with OpenShift providing the enterprise-grade foundation.
