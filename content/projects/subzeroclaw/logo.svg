@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1536 1024">
+  <rect width="1536" height="1024" fill="#f0ebe4"/>
+  <circle cx="450" cy="480" r="120" fill="#A0522D"/>
+  <circle cx="370" cy="560" r="55" fill="#1a1a1a"/>
+  <text x="600" y="520" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="96" fill="#1a1a1a">SubZeroClaw</text>
+</svg>
